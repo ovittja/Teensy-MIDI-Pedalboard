@@ -9,7 +9,7 @@ Bounce buttons[numButtons]; // Array to hold Bounce objects
 const int firstNote = 36; // C2 (MIDI note #)
 
 void setup() {
-  // Initialize input pins (pulldown) and attach Bounce objects
+  // Initialize input pins (pullup) and attach Bounce objects
   for (int i = 0; i < numButtons; i++) {
     pinMode(i + 1, INPUT_PULLUP);
     buttons[i].attach(i + 1);
